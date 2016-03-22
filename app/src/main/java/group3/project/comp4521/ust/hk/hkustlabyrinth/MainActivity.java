@@ -9,7 +9,7 @@ import Controller.DirectionGestureRecognizer;
 
 
 public class MainActivity extends ActionBarActivity {
-
+    // try commit -- by wfwongac
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
