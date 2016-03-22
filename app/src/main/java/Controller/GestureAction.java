@@ -1,6 +1,6 @@
 package Controller;
 
-public interface GestureListener {
+public interface GestureAction {
     public void onLeftSwipe();
     public void onRightSwipe();
     public void onDownSwipe();

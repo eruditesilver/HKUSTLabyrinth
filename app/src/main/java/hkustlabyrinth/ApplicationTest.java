@@ -1,4 +1,4 @@
-package group3.project.comp4521.ust.hk.hkustlabyrinth;
+package hkustlabyrinth;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
