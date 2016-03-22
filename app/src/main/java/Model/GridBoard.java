@@ -11,9 +11,9 @@ public class GridBoard {
     private Path walkedPath;
     private Player player;
 
-    public GridBoard(int column, int row, int level) {
-        this.column = column;
-        this.row = row;
+    public GridBoard(int level) {
+        this.column = GameConFig.COLUMN[level - 1];
+        this.row = GameConFig.ROW[level - 1];
         this.level = level;
         correctPath = new Path(level);
         walkedPath = new Path(column * row);
