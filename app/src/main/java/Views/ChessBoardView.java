@@ -1,8 +1,12 @@
 package Views;
 
 import android.content.Context;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 
+import Controller.DirectionGestureRecognizer;
+import Controller.GestureAction;
 import Model.BonusPosition;
 import Model.GridBoard;
 import Model.Movement;
@@ -21,6 +25,7 @@ public class ChessBoardView extends View {
         gridBoard = new GridBoard(level);
         updateBoard();
         updatePlayerPosition();
+
     }
 
     private void updateBoard() {
@@ -35,10 +40,11 @@ public class ChessBoardView extends View {
                 //TODO: handle the bonus
             }
         }
-
-
     }
 
+    public void discardBonusInPosition(Position position){
+        //TODO: discard the bonus icon in the position
+    }
     public void updatePlayerPosition() {
         //TODO: update the view according to the player position
         Position currentPosition = gridBoard.getPlayer().getCurrentPosition();
@@ -47,4 +53,6 @@ public class ChessBoardView extends View {
 
         }
     }
+
+
 }
