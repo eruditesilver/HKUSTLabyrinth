@@ -8,43 +8,51 @@ public class GridBoard {
     private int row;
     private int level;
     private Path correctPath;
-    private Path walkedPath;
     private Player player;
+
+    public final int getColumn() {
+        return column;
+    }
+
+    public final int getRow() {
+        return row;
+    }
+
+    public final Player getPlayer() {
+        return player;
+
+    }
 
     public GridBoard(int level) {
         this.column = GameConFig.COLUMN[level - 1];
         this.row = GameConFig.ROW[level - 1];
         this.level = level;
         correctPath = new Path(level);
-        walkedPath = new Path(column * row);
-        init();
+        player = new Player(correctPath.getStartPosition());
+
     }
 
     public final Path getCorrectPath() {
         return correctPath;
     }
 
-    public Path getWalkedPath() {
-        return walkedPath;
-    }
-
     public boolean playerMove(Movement movement) {
         switch (movement) {
             case UP:
                 if (!outOfBound(0, -1))
-                    player.move(Movement.UP);
+                    player.move(0,-1);
                 break;
             case DOWN:
                 if (!outOfBound(0, 1))
-                    player.move(Movement.DOWN);
+                    player.move(0, 1);
                 break;
             case LEFT:
                 if (!outOfBound(-1, 0))
-                    player.move(Movement.LEFT);
+                    player.move(-1, 0);
                 break;
             case RIGHT:
                 if (!outOfBound(1, 0))
-                    player.move(Movement.RIGHT);
+                    player.move(1, 0);
                 break;
         }
         return false;
@@ -60,15 +68,5 @@ public class GridBoard {
     private boolean outOfBound(int moveX, int moveY) {
         //TODO: check movement may lead to out of bound
         return false;
-    }
-
-    private void init() {
-        generateCorrectPath();
-        player = new Player(correctPath.getStartPosition());
-    }
-
-    private void generateCorrectPath() {
-        //TODO: generate the answer path depends on the column and row
-        int requiredStep = GameConFig.STEP_TO_CLEAR[level];
     }
 }

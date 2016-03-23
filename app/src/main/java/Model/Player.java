@@ -10,21 +10,9 @@ public class Player {
         currentPosition = position;
     }
 
-    public void move(Movement movement){
-        switch (movement){
-            case UP:
-                currentPosition.incrementY(-1);
-                break;
-            case DOWN:
-                currentPosition.incrementY(1);
-                break;
-            case LEFT:
-                currentPosition.incrementX(-1);
-                break;
-            case RIGHT:
-                currentPosition.incrementX(1);
-                break;
-        }
+    public void move(int x, int y){
+        currentPosition.incrementX(x);
+        currentPosition.incrementY(y);
     }
 
     public Player(Position initPosition){
