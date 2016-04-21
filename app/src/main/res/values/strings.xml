@@ -2,7 +2,11 @@
 <resources>
 
     <string name="app_name">HKUSTLabyrinth</string>
+    <string name="lv_menu_name">Level</string>>
+    <string name="rank_name">Ranking</string>>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="exit">EXIT</string>
+    <string name="about">ABOUT</string>
 
 </resources>
