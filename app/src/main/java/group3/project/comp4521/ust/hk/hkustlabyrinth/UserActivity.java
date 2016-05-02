@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import Model.User;
 
@@ -35,8 +36,10 @@ public class UserActivity extends ActionBarActivity {
         public void onClick(View v) {
 
             User user = new User(username, id);
+// unsure whether anything needed here for user creation ...
 
-            // unsure whether using finish() here
+            Toast.makeText(UserActivity.this, username + " is created", Toast.LENGTH_SHORT);
+
             finish();
 
         }

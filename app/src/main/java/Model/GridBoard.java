@@ -67,6 +67,11 @@ public class GridBoard {
 
     private boolean outOfBound(int moveX, int moveY) {
         //TODO: check movement may lead to out of bound
-        return false;
+        if(player.getCurrentPosition().getX() + moveX > getColumn() || player.getCurrentPosition().getY() + moveY > getRow()
+                || player.getCurrentPosition().getX() + moveX < 0 || player.getCurrentPosition().getY() + moveY < 0 ) {
+
+            return false;
+        }else
+            return true;
     }
 }
