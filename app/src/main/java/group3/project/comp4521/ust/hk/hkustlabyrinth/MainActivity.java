@@ -13,6 +13,12 @@ import Controller.DirectionGestureRecognizer;
 
 public class MainActivity extends ActionBarActivity {
 
+    private static final int EXIT = 1;
+    private static final int ABOUT = 2;
+    private static final int SETTINGS = 3;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,9 +76,9 @@ public class MainActivity extends ActionBarActivity {
             getMenuInflater().inflate(R.menu.menu_main, menu);
         */
 
-        menu.add(0, 1, 1, R.string.exit);
-        menu.add(0, 2, 2, R.string.about);
-        menu.add(0, 3, 3, R.string.action_settings);
+        menu.add(0, EXIT, 1, R.string.exit);
+        menu.add(0, ABOUT, 2, R.string.about);
+        menu.add(0, SETTINGS, 3, R.string.action_settings);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -85,15 +91,15 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == 1) {  // exit the game
+        if (id == EXIT) {  // exit the game
             finish();
         }
 
-        if (id == 2) {
+        if (id == ABOUT) {
             // Jump to page / windows for "ABOUT this Game"
         }
 
-        if (id == 3) {
+        if (id == SETTINGS) {
             // Jump to page for "Setting"
             return true;
         }

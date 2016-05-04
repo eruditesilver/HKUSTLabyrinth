@@ -15,33 +15,22 @@
         android:layout_marginTop="61dp">
 
         <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Create a New User"
-            android:id="@+id/userButton"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:background="@drawable/abc_cab_background_top_mtrl_alpha" />
-
-        <Button
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Start Game"
             android:id="@+id/startButton"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
+
             android:background="@drawable/abc_cab_background_top_mtrl_alpha" />
 
         <Button
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ranking"
             android:id="@+id/rankButton"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="1"
             android:background="@drawable/abc_cab_background_top_mtrl_alpha" />
     </LinearLayout>
 
