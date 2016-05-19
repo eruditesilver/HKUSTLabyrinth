@@ -12,7 +12,22 @@
         android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp">
+        android:layout_marginTop="61dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="HKUST Labyrinth"
+            android:id="@+id/appName"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/linearLayout"
+            android:layout_alignEnd="@+id/linearLayout"
+            android:layout_gravity="center"
+            android:textSize="50dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center" />
 
         <Button
             android:layout_width="match_parent"
@@ -23,7 +38,9 @@
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
 
-            android:background="@drawable/abc_cab_background_top_mtrl_alpha" />
+            android:background="@drawable/abc_cab_background_top_mtrl_alpha"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp" />
 
         <Button
             android:layout_width="match_parent"
@@ -33,7 +50,6 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/abc_cab_background_top_mtrl_alpha" />
     </LinearLayout>
-
 
 
 </RelativeLayout>
