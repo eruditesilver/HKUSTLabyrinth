@@ -1,6 +1,10 @@
 package Views;
 
 import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -20,26 +24,61 @@ import Model.Position;
 public class ChessBoardView extends View {
     private GridBoard gridBoard;
 
-    public ChessBoardView(Context context, int level) {
+    public ChessBoardView(Context context) {
         super(context);
-        gridBoard = new GridBoard(level);
-        updateBoard();
-        updatePlayerPosition();
+        gridBoard = new GridBoard(1);
+        //updateBoard();
+        //updatePlayerPosition();
 
     }
 
-    private void updateBoard() {
-        //TODO: generate a grid and display the bonus
+    public ChessBoardView(Context context, int level) {
+        super(context);
+        gridBoard = new GridBoard(level);
+        //updateBoard();
+        //updatePlayerPosition();
+
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas){
+        super.onDraw(canvas);
+
+        Rect ourRect = new Rect();
+        ourRect.set(0,0,50,50);
+
+        Paint black = new Paint();
+        black.setColor(Color.BLACK);
+        black.setStyle(Paint.Style.FILL);
+
+        Paint white = new Paint();
+        white.setColor(Color.WHITE);
+        white.setStyle(Paint.Style.FILL);
+
+
+
         int column = gridBoard.getColumn();
         int row = gridBoard.getRow();
 
         // Draw chessboard
         for(int i=1; i<=row; i++){
             for(int j=1; j<=column; j++){
+                if(i == j){
+                    canvas.drawRect(ourRect, black);
+                }else{
+                    canvas.drawRect(ourRect, white);
+                }
 
             }
         }
 
+    }
+
+
+    private void updateBoard() {
+        //TODO: generate a grid and display the bonus
+        int column = gridBoard.getColumn();
+        int row = gridBoard.getRow();
 
         Path path = gridBoard.getCorrectPath();
 

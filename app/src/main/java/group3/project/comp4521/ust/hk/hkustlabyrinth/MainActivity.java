@@ -1,7 +1,7 @@
 package group3.project.comp4521.ust.hk.hkustlabyrinth;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import Controller.DirectionGestureRecognizer;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     private static final int EXIT = 1;
     private static final int ABOUT = 2;
@@ -31,8 +31,6 @@ public class MainActivity extends ActionBarActivity {
 
         Button rankBuuton = (Button) findViewById(R.id.rankButton);
         rankBuuton.setOnClickListener(new RankBtnListener());
-
-
 
         DirectionGestureRecognizer dgr = new DirectionGestureRecognizer();
 

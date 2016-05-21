@@ -1,12 +1,12 @@
 package group3.project.comp4521.ust.hk.hkustlabyrinth;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class LvMenuActivity extends ActionBarActivity {
+public class LvMenuActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
