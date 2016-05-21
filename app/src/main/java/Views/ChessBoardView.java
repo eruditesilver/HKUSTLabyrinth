@@ -33,18 +33,22 @@ public class ChessBoardView extends View {
         int column = gridBoard.getColumn();
         int row = gridBoard.getRow();
 
-        Path path = gridBoard.getCorrectPath();
+        // Draw chessboard
+        for(int i=1; i<=row; i++){
+            for(int j=1; j<=column; j++){
 
-        for (Position p = path.getStartPosition(); p == null; p = path.getNextPosition(p)) {
-            if (p instanceof BonusPosition) {
-                //TODO: handle the bonus
             }
         }
+
+
+        Path path = gridBoard.getCorrectPath();
+
+
+        //for (Position p = path.getStartPosition(); p == null; p = path.getNextPosition(p)) {
+        //}
     }
 
-    public void discardBonusInPosition(Position position){
-        //TODO: discard the bonus icon in the position
-    }
+
     public void updatePlayerPosition() {
         //TODO: update the view according to the player position
         Position currentPosition = gridBoard.getPlayer().getCurrentPosition();
