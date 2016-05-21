@@ -7,29 +7,34 @@
     android:layout_height="match_parent"
     tools:context=".RankActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        >
 
-        <include
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
-            layout="@layout/toolbar_layout"
-            />
-
-        <android.support.design.widget.TabLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tabLayout"
-            app:tabMode="fixed"
-            app:tabGravity="fill"
-            ></android.support.design.widget.TabLayout>
-    </android.support.design.widget.AppBarLayout>
-    <android.support.v4.view.ViewPager
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:id="@+id/viewPager"
-        ></android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/bg_ust">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            style="@style/Base.TextAppearance.AppCompat.Display1"
+            android:text="Ranking"
+            android:autoText="false"
+            android:textColor="@color/background_floating_material_dark"
+            android:enabled="false" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"
+            android:layout_gravity="center_horizontal" />
+
+    </LinearLayout>
 
 </RelativeLayout>

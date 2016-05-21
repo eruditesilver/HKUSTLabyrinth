@@ -32,9 +32,6 @@ public class MainActivity extends ActionBarActivity {
         Button rankBuuton = (Button) findViewById(R.id.rankButton);
         rankBuuton.setOnClickListener(new RankBtnListener());
 
-        Button userButton = (Button) findViewById(R.id.userButton);
-        userButton.setOnClickListener(new UserBtnListener());
-
 
 
         DirectionGestureRecognizer dgr = new DirectionGestureRecognizer();
@@ -59,14 +56,7 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 
-    class UserBtnListener implements View.OnClickListener {
-        @Override
-        public void onClick(View v) {
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this, UserActivity.class);
-            MainActivity.this.startActivity(intent);
-        }
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
